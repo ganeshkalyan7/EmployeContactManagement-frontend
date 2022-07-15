@@ -1,13 +1,98 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+   /* contact page design*/
+.contact{
+    text-align: center;
+    padding-top: 5%;
+    background-image: 
+    url(
+"https://img.wallpapersafari.com/desktop/1680/1050/53/18/jEVw1t.jpg");
+    background-position:unset;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  color: azure;
+
+}
+.imagecard{
+    width: 200 !important;
+    height:200px;
+    background-color: bisque;
+    border-bottom: 1px solid lightblue;
+}
+.cardContent{
+    background-image: 
+    url(
+"https://i.pinimg.com/originals/f5/1f/b7/f51fb7e19ee8385b30a451d2a70c2914.jpg");
+background-position:unset;
+  background-repeat: no-repeat;
+  background-size: cover;
+color:black;
+font-style:oblique
+}
+.cardButton{
+    display: flex !important;
+    flex: 1 !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+
+
+     /* add contacts page */
+.content{
+    text-align: center;
+    padding-top: 5%;
+    background-image: 
+    url(
+"https://cdn1.vectorstock.com/i/1000x1000/21/60/blue-light-tech-background-vector-20432160.jpg");
+    background-position:unset;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1200;
+  color: azure;
+}
+#form{
+    color: antiquewhite;
+}
+/* https://www.hdwallpapers.in/download/cute_cartoon_dinosaur_hd_cartoon-1920x1080.jpg */
+
+
+
+
+
+/* cards  */
+/* .cards{
+    border-radius: 10%;
+} */
+
+
+/* edit page */
+/* #editcontact{
+    text-align: center;
+    padding-top: 5%;
+    background-image: 
+    url(
+"https://w0.peakpx.com/wallpaper/499/101/HD-wallpaper-funny-silly-face-abstract-blue-cartoon-character-design-iphone-pixel.jpg");
+    background-position:unset;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  
+
+} */
+/* view page design*/
+.sider{
+    margin-top: 60px;
+    
+}
+#img{
+    width: 400px;
+    height:fit-content;
+    border-radius: 50%;
+}
+
+#editcontact{
+   display: flex;
+   /* align-items: center; */
+   justify-content: space-between;
+ 
 }
