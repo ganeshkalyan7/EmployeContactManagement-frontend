@@ -16,6 +16,7 @@ function SignUp() {
       lastname: "",
       email: "",
       password: "",
+      confirmPassword: "",
     },
     validationSchema: yup.object({
       firstname: yup.string().required("firstname is required"),

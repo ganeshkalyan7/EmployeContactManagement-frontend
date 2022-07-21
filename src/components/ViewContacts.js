@@ -84,6 +84,10 @@ function ViewContacts() {
                   <span className="text-danger"> EXPERIANCE </span>:{" "}
                   <b> {contact.experiance} </b>
                 </li>
+                <li className="list-group-item">
+                  <span className="text-danger"> DATE OF BIRTH </span>:{" "}
+                  <b> {contact.DateOfBirth} </b>
+                </li>
               </ul>
             </div>
           </div>
