@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextField, Button, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 function SignUp() {
   const navigate = useNavigate();
+  // const [error, setError] = useState(false);
   const formik = useFormik({
     initialValues: {
       firstname: "",
@@ -52,7 +53,10 @@ function SignUp() {
         navigate("/login");
       } catch (err) {
         toast.error(err.response.data.msg);
-        console.log(err.response.data);
+        // setError(err.response.data.msg);
+        // console.log(err.response.data);
+        // popup(err.response.data.msg);
+        // alert(err.response.data.msg);
       }
     },
   });
@@ -151,6 +155,8 @@ function SignUp() {
                   Register
                 </Button>
               </Box>
+              {/* {error && <span className="text-danger">{error}</span>} */}
+              <br />
               <span>already have an account?</span>
               <Link to="/login">
                 <b className="text-warning"> Login </b>

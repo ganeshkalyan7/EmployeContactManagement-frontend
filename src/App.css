@@ -42,8 +42,11 @@
 "https://wallpapercave.com/wp/wp5306501.jpg ");
     background-position:unset;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 1000px;
+  background-size: auto;
+  /* height: 1000px; */
+  height: 100vh;
+  width: 100vw;
+
   padding-top:17%;
   color:black;
   font-style: oblique;
