@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {
-  Card,
   CardActions,
-  CardContent,
-  CardMedia,
   Button,
-  Typography,
+  // CardContent,
+  // CardMedia,
+  // Typography,
+  // Card,
   Grid,
 } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -81,7 +81,10 @@ function Contact() {
     <div className="contact">
       <nav className="navbar navbar-dark bg-dark">
         <div className="container-fluid">
-          <div className="d-flex justify-content-center">
+          <div
+            className="d-flex justify-content-center"
+            style={{ position: "static" }}
+          >
             <h1 className="container-fluid">
               <b className="text"> CONTACT FORM </b>
             </h1>
@@ -111,34 +114,37 @@ function Contact() {
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
           {user.map((val) => (
-            <Grid item xs={2} sm={4} md={4} key={val._id}>
-              <div>
-                <Card sx={{ maxWidth: 345 }} className="cards">
-                  <CardMedia
-                    component="img"
-                    alt="green iguana"
-                    height="100"
-                    image={val.image}
-                    className="imagecard"
-                  />
-                  <CardContent className="cardContent">
-                    <Typography gutterBottom variant="h5" component="div">
-                      <AccountCircleIcon sx={{ fontSize: 50 }} />{" "}
-                      <b> {val.name} </b>
-                    </Typography>
-
-                    <CardContent>
-                      <Typography gutterBottom variant="h6" component="div">
-                        <MailLockIcon sx={{ fontSize: 50 }} />:{" "}
-                        <b> {val.email} </b>
-                      </Typography>
-
-                      <Typography gutterBottom variant="h6" component="div">
-                        <PhoneIphoneIcon sx={{ fontSize: 50 }} />
-                        <b> {val.phone} </b>
-                      </Typography>
-                    </CardContent>
-                  </CardContent>
+            <Grid item xs={4} key={val._id}>
+              <div className="card">
+                <img src={val.image} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <AccountCircleIcon sx={{ fontSize: 50, color: "black" }} />
+                  <b
+                    className="card-title"
+                    style={{ fontSize: "50", color: "black" }}
+                  >
+                    {" "}
+                    {val.name}{" "}
+                  </b>
+                  <br />
+                  <MailLockIcon sx={{ fontSize: 40, color: "black" }} />
+                  <b
+                    className="card-title"
+                    style={{ fontSize: "50", color: "black" }}
+                  >
+                    {" "}
+                    {val.email}{" "}
+                  </b>
+                  <br />
+                  <br />
+                  <PhoneIphoneIcon style={{ fontSize: "50", color: "black" }} />
+                  <b
+                    className="card-title"
+                    style={{ fontSize: "50", color: "black" }}
+                  >
+                    {val.phone}
+                  </b>
+                  <br />
                   <CardActions>
                     <Link
                       to={`/ViewContacts/${val._id}`}
@@ -162,7 +168,7 @@ function Contact() {
                       Delete
                     </Button>
                   </CardActions>
-                </Card>
+                </div>
               </div>
             </Grid>
           ))}

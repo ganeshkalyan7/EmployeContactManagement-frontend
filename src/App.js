@@ -13,6 +13,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <ToastContainer position="top-center" limit={1} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -22,7 +23,7 @@ function App() {
           <Route path="/ViewContacts/:id" element={<ViewContacts />} />
         </Routes>
       </BrowserRouter>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div>
+    <div className="header">
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>

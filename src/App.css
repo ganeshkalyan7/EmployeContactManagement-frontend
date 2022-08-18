@@ -1,24 +1,69 @@
-
- /* login page design*/
 .login{
-    text-align: center;
-    padding-top: 5%;
-    background-image: 
-    url(
+  text-align: center;
+  background-image: 
+  url(
 "https://www.designmantic.com/blog/wp-content/uploads/2016/11/Minimal.png");
-    background-position:unset;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1000px;
-  color: azure;
+  background-position:unset;
+background-repeat: no-repeat;
+background-size: cover;
+height:100vh;
+color: black
 }
+
+
+
+.loginform{
+  align-items: center;
+  justify-content:space-around;
+  display: flex;
+  background-color:lightblue; 
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+
+}
+.textfeild{
+
+  border-bottom: 1px solid lavender;
+}
+
+
+ 
+.loginimage{
+  display: flex;
+  flex:30%;
+  object-fit: contain;
+}
+
+.loginbody{
+  display: flex;
+  flex:50%;
+   background-color: cornsilk;
+   width: max-content;
+   height: max-content;
+   justify-content: center;
+   background-color:whitesmoke;
+   border-radius: 10px;
+   box-shadow:-1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+   padding-bottom: 40px;
+   margin: 30px;
+   color: black;
+} 
+.loginimage>img{
+  width: 500px;
+  height: 500px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+
 
 
 
  /* singUp page design*/
  .signup{
   text-align: center;
-  padding-top: 5%;
+  display: flex;
+  justify-content: space-between;
   background-image: 
     url(
 "https://images.hdqwalls.com/download/landscape-mountains-minimalist-o7-1920x1080.jpg");
@@ -27,10 +72,43 @@
   background-size: cover;
   color: azure;
   max-height:max-content;
-  height: 1000px;
+
+  
 
 
  }
+ 
+ .signup__header{
+  display: flex;
+  border: 1px solid whitesmoke;
+  background-color:white;
+  flex-direction: row;
+  justify-content: center;
+border-radius: 30px;
+margin-bottom: 50px;
+box-shadow:5px 4px 30px -6px rgba(0, 0, 0, 0.75)
+}
+ 
+.image{
+  display: flex;
+  flex: 30%;
+  justify-content: space-between;
+}
+
+.singupbody{
+  display: flex;
+  flex:70%;
+  background-color: lightgray;
+  justify-content:center;
+  border-radius: 30px;
+  margin: 30px;
+  box-shadow:2px 20px 30px -6px rgba(0, 0, 0, 0.75);
+  color: black;
+  
+ 
+  
+} 
+
 
 
 /* home page design*/
@@ -44,11 +122,14 @@
   background-repeat: no-repeat;
   background-size: auto;
   /* height: 1000px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   height: 100vh;
   width: 100vw;
 
   padding-top:17%;
-  color:black;
+  color:antiquewhite;
   font-style: oblique;
   font-variant: small-caps;
   font-size:large;
@@ -58,6 +139,11 @@
   color:coral
 }
 
+.header{
+  display: flex !important;
+  flex-direction: row !important;
+
+}
 /**/
 
 /*https://wallpaperaccess.com/full/5651982.jpg*/

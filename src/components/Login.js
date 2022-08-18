@@ -5,6 +5,7 @@ import axios from "axios";
 import { Box } from "@mui/system";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+// import loginImage from "../images/0204.png";
 
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -44,78 +45,109 @@ function Login() {
         }
       } catch (err) {
         toast.error(err.response.data.msg);
-        console.log(err.response.data.msg);
+        // setError(err.response.data.msg);
+        // console.log(err.response.data.msg);
       }
     },
   });
 
   return (
-    <div className="login">
-      <div className="container">
-        <div style={{ margin: "5%" }}>
-          <Typography variant="h4" component="div">
-            <h1>
-              <b>
-                <span className="text-danger"> Login </span>
-                to view the contacts{" "}
-              </b>
-            </h1>
-          </Typography>
-          <br /> <br />
-          <div className="text">
-            <form autoComplete="off" onSubmit={formik.handleSubmit}>
-              <Box
-                display="flex"
-                flexDirection="column"
-                justifyContent={"center"}
-                maxWidth={900}
-                alignContent={"center"}
-                alignSelf="center"
-                marginLeft={"auto"}
-                marginRight="auto"
-                marginTop={5}
-              />
-              <TextField
-                type="text"
-                name="email"
-                label="Email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-              />
-              <br />
-              {formik.errors.email ? (
-                <span className="text-danger">{formik.errors.email}</span>
-              ) : null}
+    <>
+      <div className="login">
+        <div className="container">
+          <div>
+            <Typography variant="h4" component="div">
+              <h1>
+                <b>
+                  <span className="text-danger"> Login </span>
+                  to view the contacts{" "}
+                </b>
+              </h1>
+            </Typography>
+            <br /> <br />
+            <div className="text">
+              <div className="loginform">
+                <div className="loginimage">
+                  <img
+                    src="https://www.getillustrations.com/packs/plastic-illustrations-scene-builder-pack/scenes/_1x/accounts%20_%20man,%20workspace,%20desk,%20laptop,%20login,%20user_md.png"
+                    alt="login"
+                  />
+                </div>
 
-              <br />
+                <div className="loginbody">
+                  <form autoComplete="off" onSubmit={formik.handleSubmit}>
+                    <Box
+                      display="flex"
+                      flexDirection="column"
+                      justifyContent={"center"}
+                      maxWidth={400}
+                      alignContent={"center"}
+                      alignSelf="center"
+                      marginLeft={"auto"}
+                      marginRight="auto"
+                      marginTop={5}
+                    />
+                    <TextField
+                      variant="standard"
+                      margin="normal"
+                      required
+                      fullWidth
+                      autoFocus
+                      type="text"
+                      name="email"
+                      label="Email"
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                      className="textfeild"
+                    />
+                    <br />
+                    {formik.errors.email ? (
+                      <span className="text-danger">{formik.errors.email}</span>
+                    ) : null}
 
-              <TextField
-                label="Password"
-                type="password"
-                name="password"
-                value={formik.values.password}
-                onChange={formik.handleChange}
-                sx={{ color: "white" }}
-              />
-              <br />
-              {formik.errors.password ? (
-                <span className="text-danger">{formik.errors.password}</span>
-              ) : null}
+                    <br />
 
-              <br />
-              <Button variant="contained" type="submit">
-                Login
-              </Button>
-              <br />
-              <span> dont have account ?</span>
-              <Link to="/signup">
-                <b className="text-warning"> register </b>
-              </Link>
-            </form>
+                    <TextField
+                      label="Password"
+                      type="password"
+                      name="password"
+                      variant="standard"
+                      margin="normal"
+                      required
+                      fullWidth
+                      autoFocus
+                      value={formik.values.password}
+                      onChange={formik.handleChange}
+                      sx={{ color: "white" }}
+                    />
+                    <br />
+                    {formik.errors.password ? (
+                      <span className="text-danger">
+                        {formik.errors.password}
+                      </span>
+                    ) : null}
+
+                    <br />
+                    <Button variant="contained" type="submit">
+                      Login
+                    </Button>
+                    <br />
+
+                    <br />
+                    <span> dont have account ?</span>
+                    <Link to="/signup">
+                      <b className="text-primary"> register </b>
+                    </Link>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        {/* </Grid>
+        </Grid> */}
       </div>
-    </div>
+    </>
   );
 }
 

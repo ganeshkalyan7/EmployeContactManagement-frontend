@@ -51,7 +51,12 @@ function ViewContacts() {
         <div className="card-body">
           <div style={{ display: "grid", gridTemplateColumns: "30% 70%" }}>
             <div>
-              <img src={contact.image} alt="img" id="img" />
+              <img
+                src={contact.image}
+                alt="img"
+                id="img"
+                className="d-flex justify-content-start"
+              />
             </div>
             <div className="sider">
               <ul className="list-group list-group-flush">
